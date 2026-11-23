@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" style="scroll-padding-top:84px;scroll-behavior:smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LaunchLoka – Your negosyo, launched in 3 to 7 days.</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{display:['Space Grotesk','sans-serif']}}}}</script>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font-family:Inter,sans-serif;background:#0B132B;color:#fff}
+h1,h2,h3,h4,.font-display{font-family:'Space Grotesk',sans-serif}
+.sb{border:3px solid #070B19;box-shadow:4px 4px 0 #070B19;transition:transform .14s,box-shadow .14s;cursor:pointer}
+.sb:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #070B19}
+.sb:active{transform:translate(2px,2px);box-shadow:2px 2px 0 #070B19}
+.sc{border:3px solid #070B19;box-shadow:6px 6px 0 #070B19}
+.ring{outline:4px solid #070B19;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.sb{transition:none}}
+</style>
+</head>
+<body class="antialiased">
+<header class="sticky z-50 bg-[#0B132B] border-b-[3px] border-[#070B19]" style="top:env(safe-area-inset-top,0px)">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-6">
+<a href="#top" class="font-display text-2xl font-bold tracking-tight">Launch<span class="text-[#FFD23F]">Loka</span></a>
+<nav class="hidden md:flex gap-8 text-sm font-semibold">
+<a class="hover:text-[#FFD23F]" href="#countdown">Countdown</a><a class="hover:text-[#FFD23F]" href="#launch-kit">Launch kit</a><a class="hover:text-[#FFD23F]" href="#pricing">Pricing</a></nav>
+<div class="flex items-center gap-3">
+<a href="#contact" class="sb bg-[#FF7666] text-[#0B132B] font-display font-bold text-sm px-5 py-2.5 rounded-xl whitespace-nowrap">Launch me</a>
+<button id="mb" aria-label="Open navigation menu" aria-expanded="false" class="md:hidden w-11 h-11 rounded-xl bg-[#152247] border-[2.5px] border-[#070B19] text-xl">☰</button></div></div>
+<nav id="mn" class="hidden md:hidden bg-[#152247] border-t-[3px] border-[#070B19] px-4 py-4 flex-col gap-3">
+<a class="px-4 py-3 rounded-xl bg-[#0B132B] border-2 border-[#070B19] font-semibold" href="#countdown">Countdown</a><a class="px-4 py-3 rounded-xl bg-[#0B132B] border-2 border-[#070B19] font-semibold" href="#launch-kit">Launch kit</a><a class="px-4 py-3 rounded-xl bg-[#0B132B] border-2 border-[#070B19] font-semibold" href="#pricing">Pricing</a></nav>
+</header>
+<main>
+<section id="top" class="py-10 sm:py-20 lg:py-24 overflow-x-clip"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 flex flex-col items-start">
+<h1 class="font-bold text-[2.65rem] sm:text-[3.5rem] lg:text-[4.15rem] leading-[1.06] tracking-tight [text-wrap:balance]">Your negosyo, <span class="inline-block bg-[#FFD23F] text-[#0B132B] px-3 py-0.5 rounded-xl border-[3px] border-[#070B19] shadow-[4px_4px_0_#070B19] -rotate-1 my-1">launched</span> in 3 to 7 days.</h1>
+<p class="mt-6 text-lg sm:text-xl leading-relaxed text-slate-200 max-w-2xl">We don’t just put you online. We stay with you until the orders come in. Our local crew visits your shop, builds your page and GCash or Maya payment link, and hands you a ready-to-scan QR kit.</p>
+<div class="mt-8 flex flex-wrap gap-4">
+<a href="#contact" class="sb bg-[#FF7666] text-[#0B132B] font-display font-bold text-lg px-6 py-3.5 rounded-xl">Book a free consultation →</a>
+<a href="#countdown" class="sb bg-[#FFFDF7] text-[#0B132B] font-display font-bold text-lg px-6 py-3.5 rounded-xl">See the countdown ↓</a></div></div>
+<div class="lg:col-span-5 flex flex-col items-center">
+<div class="w-60 h-60 sm:w-72 sm:h-72 rounded-full bg-[#FFD23F] text-[#0B132B] border-4 border-[#070B19] shadow-[8px_8px_0_#070B19] -rotate-6 p-5"><div class="w-full h-full rounded-full border-[2.5px] border-dashed border-[#0B132B] flex flex-col items-center justify-center text-center"><span class="font-display font-bold text-4xl sm:text-5xl">3 to 7</span><span class="font-display font-bold text-xl sm:text-2xl mt-2">days to launch</span></div></div>
+<div id="tags" class="mt-8 flex flex-wrap justify-center gap-3"></div></div></div></section>
+
+<section class="bg-[#FFD23F] text-[#0B132B] border-y-[3px] border-[#070B19] py-6"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-3"><span class="font-display font-bold text-xl mr-2">We launch:</span><span id="chips" class="contents"></span></div></section>
+
+<section id="countdown" class="bg-[#FFFDF7] text-[#0B132B] py-16 sm:py-20"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight">The launch countdown</h2><p class="mt-3 text-lg text-[#1E293B]">Three clear steps from our first visit to your first online orders.</p>
+<div id="steps" class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8"></div></div></section>
+
+<section id="launch-kit" class="py-16 sm:py-20"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight">What’s in your <span class="text-[#6EE7B7]">launch kit</span></h2><p class="mt-3 text-lg text-slate-200">Practical tools and real local support so you can start taking orders right away.</p>
+<div id="kit" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8"></div></div></section>
+
+<section id="pricing" class="bg-[#FFFDF7] text-[#0B132B] py-16 sm:py-20"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight">Pay as you grow</h2><p class="mt-3 text-lg text-[#1E293B] max-w-xl">Clear pricing with no hidden charges. A setup fee, a simple monthly plan, and a small commission only when your shop earns.</p>
+<div id="plans" class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8"></div></div></section>
+
+<section id="contact" class="bg-[#FF7666] text-[#0B132B] py-16 sm:py-20 border-t-[3px] border-[#070B19]"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-5"><h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-[2.85rem] tracking-tight">Ready for liftoff?</h2>
+<p class="mt-4 text-lg font-medium">Message us for a free consultation. Tell us about your shop and our local crew will visit you in person to plan your 3 to 7 day launch.</p>
+<div class="mt-8 bg-white sc rounded-2xl p-6"><h3 class="font-display font-bold text-xl">Reach our local crew</h3><dl id="det" class="mt-5 space-y-4"></dl></div></div>
+<div class="lg:col-span-7"><div class="bg-[#FFFDF7] sc rounded-2xl p-6 sm:p-8">
+<div id="ok" class="hidden py-6 flex-col items-start gap-4"><div class="w-14 h-14 rounded-2xl bg-[#6EE7B7] border-[3px] border-[#070B19] flex items-center justify-center text-2xl">✓</div><h3 class="font-display font-bold text-2xl sm:text-3xl">Consultation request received</h3><p id="okt" class="text-base leading-relaxed text-[#1E293B]"></p><button id="again" class="sb bg-[#FFD23F] font-display font-bold px-5 py-3 rounded-xl">Send another consultation request</button></div>
+<form id="f" novalidate><h3 class="font-display font-bold text-2xl">Book a free consultation</h3><p class="mt-1.5 text-[#334155]">Share a few details and we will set up a time to meet you.</p>
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div><label class="block font-display font-bold text-sm" for="ownerName">Your name</label><input id="ownerName" class="fi" placeholder="e.g. Ate Lorna"><p class="er" data-e="ownerName"></p></div>
+<div><label class="block font-display font-bold text-sm" for="businessName">Business name</label><input id="businessName" class="fi" placeholder="e.g. Lorna Panaderia"><p class="er" data-e="businessName"></p></div>
+<div><label class="block font-display font-bold text-sm" for="businessType">Business type</label><select id="businessType" class="fi"><option value="">Choose your business type</option></select><p class="er" data-e="businessType"></p></div>
+<div><label class="block font-display font-bold text-sm" for="contactInfo">Mobile, email, or Facebook link</label><input id="contactInfo" class="fi" placeholder="e.g. 0917 123 4567"><p class="er" data-e="contactInfo"></p></div>
+<div class="sm:col-span-2"><label class="block font-display font-bold text-sm" for="barangay">Barangay and city</label><input id="barangay" class="fi" placeholder="e.g. Barangay Matina Crossing, Davao City"><p class="er" data-e="barangay"></p></div>
+<div class="sm:col-span-2"><label class="block font-display font-bold text-sm" for="notes">What would you like help with? (Optional)</label><textarea id="notes" rows="3" class="fi" placeholder="Tell us what you sell or what language you prefer for training."></textarea></div></div>
+<button type="submit" class="sb mt-6 bg-[#0B132B] text-[#FFD23F] font-display font-bold px-6 py-3.5 rounded-xl">Request free consultation</button></form></div></div></div></section>
+
+<section id="faq" class="bg-[#FFFDF7] text-[#0B132B] py-16 sm:py-20 border-t-[3px] border-[#070B19]"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-5"><h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight">Common questions</h2><p class="mt-3 text-lg text-[#1E293B]">Plain answers about our 3 to 7 day setup, GCash and Maya payments, and local crew support.</p><div id="flt" class="mt-6 flex flex-wrap gap-2.5"></div></div>
+<div id="faqs" class="lg:col-span-7 space-y-4"></div></div></section>
+</main>
+<footer class="border-t-[3px] border-[#070B19] py-10"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+<p class="font-display font-bold text-lg sm:text-xl">Launch<span class="text-[#FFD23F]">Loka</span>. Your negosyo, launched in 3 to 7 days.</p>
+<nav class="flex flex-wrap gap-6 text-sm font-semibold text-slate-200"><a class="hover:text-[#FFD23F]" href="#countdown">Countdown</a><a class="hover:text-[#FFD23F]" href="#launch-kit">Launch kit</a><a class="hover:text-[#FFD23F]" href="#pricing">Pricing</a><a class="hover:text-[#FFD23F]" href="#contact">Contact</a><a class="hover:text-[#FFD23F]" href="#faq">FAQ</a></nav></div></footer>
+
+<style>.fi{margin-top:6px;width:100%;padding:12px 16px;border-radius:12px;background:#fff;color:#0B132B;border:2.5px solid #070B19;font-size:16px}.fi:focus{outline:none;box-shadow:0 0 0 3px #FFD23F}.er{margin-top:6px;font-size:14px;font-weight:600;color:#991B1B}</style>
+<script>
+const $=s=>document.querySelector(s);
+const Y='#FFD23F',M='#6EE7B7',C='#FF7666';
+const TYPES=['Food stalls','Sari-sari stores','Bakeries','Salons','Tutors','Online sellers','Home businesses'];
+const STEPS=[['3','Build','Page','We meet you, take photos, and set up your page, menu, or catalog.',Y],['2','Teach','Pay','We show you how to take orders and get paid, in Filipino or the local dialect.',M],['1','Launch','Orders','Your QR code goes live, and we stay until the first orders arrive.',C]];
+const KIT=[['Launch in 3 to 7 Days','Social page, catalog, GCash or Maya link, and QR code ready in 3 to 7 days.',['Social page','Menu or catalog','GCash or Maya link','Live QR code'],Y,'★'],['Starter Kit','Printed tools for your counter or stall so walk-in customers can scan and order right away.',['QR sticker','Price or menu poster','How-to card'],M,'▣'],['Local crew','Five team members covering different barangays, visiting in person to set things up with you.',['In-person visit','Barangay coverage','Hands-on setup'],C,'☺'],['Weekly Loka Report','A simple one-page summary of orders, best sellers, and one practical tip for the week.',['Order summary','Best sellers','Weekly tip'],Y,'≡']];
+const PLANS=[['Setup fee','₱1,500','one-time','One-time setup','Covers your in-person visit, product photos, page and catalog build, GCash or Maya setup, and printed Starter Kit.',Y],['Monthly plan','₱500','per month','Ongoing support','Keeps your page updated, includes your Weekly Loka Report, and gives you local crew help whenever you need changes.',M],['Small commission','3%','per completed order','Only when the shop earns','Charged only on completed online orders, so you only pay more when sales actually come in.',C]];
+const DET=[['Facebook page','fb.com/LaunchLokaPH','f'],['Mobile number','+63 917 555 0148','☎'],['Email','hello@launchloka.ph','@'],['Areas served','Matina, Poblacion, Buhangin, Toril, and nearby Davao City barangays','⌖']];
+const CATS=['3–7 day setup','Local payments','Onboarding support'];
+const FAQ=[['3–7 day setup','Why does the setup take 3 to 7 days?','Our local crew visits your shop in person, takes clear photos of your food or items, sets up your page and catalog, and prints your Starter Kit. Taking 3 to 7 days gives us time to double-check your prices, prepare your QR sticker and poster, and test everything with you before going live.'],['3–7 day setup','What happens during the first in-person visit?','A crew member assigned to your barangay meets you at your stall, store, or home. We list your items and prices, take simple product photos, and agree on how you want to receive and confirm orders.'],['Local payments','How do GCash and Maya payments work?','We link your existing GCash or Maya account to your online order link and printed QR code. When a customer pays, the money goes straight to your wallet so you do not have to wait for payouts.'],['Local payments','Can customers still pay in cash on pickup or delivery?','Yes. During setup we configure your order flow so customers can choose GCash, Maya, or cash on pickup or delivery based on what works best for your shop.'],['Onboarding support','What if I am not used to selling online?','That is who LaunchLoka is built for. We teach you step by step in Filipino or your local dialect, leave a simple printed how-to card at your counter, and stay with you until your first orders come in.'],['Onboarding support','What help do I get after my shop goes live?','Whenever you need to update prices, add a new item, or replace a photo, you can message our local crew. You also receive a one-page Weekly Loka Report summarizing your orders, best sellers, and one practical tip for the week.']];
+const go=id=>document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();$('#mn').classList.add('hidden');$('#mn').classList.remove('flex');go(a.getAttribute('href').slice(1))}));
+$('#mb').onclick=()=>{const m=$('#mn'),o=m.classList.contains('hidden');m.classList.toggle('hidden',!o);m.classList.toggle('flex',o);$('#mb').setAttribute('aria-expanded',o)};
+let sel='',active=null;
+function tags(){$('#tags').innerHTML=STEPS.map((s,i)=>`<button data-s="${s[0]}" class="sb font-display font-bold px-4 py-2 rounded-xl text-[#0B132B]" style="background:${['#FFFDF7',M,C][i]}">${s[0]} ${s[2]}</button>`).join('');$('#tags').querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.s;steps();go('countdown')})}
+function chips(){$('#chips').innerHTML=TYPES.map(t=>`<button aria-pressed="${sel===t}" data-t="${t}" class="sb font-display font-bold px-5 py-2 rounded-full ${sel===t?'bg-[#0B132B] text-[#FFD23F]':'bg-white'}">${t}</button>`).join('');$('#chips').querySelectorAll('button').forEach(b=>b.onclick=()=>{sel=sel===b.dataset.t?'':b.dataset.t;chips();$('#businessType').value=sel})}
+function steps(){$('#steps').innerHTML=STEPS.map(s=>`<article class="sc rounded-2xl p-6 sm:p-7 ${active===s[0]?'ring':''}" style="background:${s[4]}"><div class="flex justify-between items-start"><span class="w-12 h-12 rounded-xl bg-[#FFFDF7] border-[3px] border-[#070B19] flex items-center justify-center font-display font-bold text-2xl">${s[0]}</span><span class="bg-[#0B132B] text-white font-display font-bold text-xs px-3 py-1.5 rounded-lg">${s[2]}</span></div><h3 class="mt-6 font-display font-bold text-2xl">${s[1]}</h3><p class="mt-2 text-base leading-relaxed">${s[3]}</p></article>`).join('')}
+function kit(){$('#kit').innerHTML=KIT.map(k=>`<article class="bg-[#FFFDF7] text-[#0B132B] rounded-2xl border-[3px] border-[#070B19] p-6" style="box-shadow:8px 8px 0 ${k[3]}"><div class="flex items-start gap-4"><span class="w-11 h-11 rounded-xl border-[3px] border-[#070B19] flex items-center justify-center text-xl shrink-0" style="background:${k[3]}">${k[4]}</span><div><h3 class="font-display font-bold text-xl">${k[0]}</h3><p class="mt-1.5 text-base leading-relaxed text-[#1E293B]">${k[1]}</p></div></div><ul class="mt-5 pt-4 border-t-2 border-[#0B132B]/10 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-semibold">${k[2].map(h=>`<li class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-sm border-2 border-[#070B19]" style="background:${k[3]}"></span>${h}</li>`).join('')}</ul></article>`).join('')}
+function plans(){$('#plans').innerHTML=PLANS.map(p=>`<article class="bg-white sc rounded-2xl overflow-hidden flex flex-col"><div class="px-6 py-4 border-b-[3px] border-[#070B19]" style="background:${p[5]}"><p class="text-xs font-bold">${p[3]}</p><h3 class="font-display font-bold text-xl">${p[0]}</h3></div><div class="p-6 flex flex-col flex-1"><p class="font-display font-bold text-4xl">${p[1]} <span class="text-base font-semibold text-[#334155]">${p[2]}</span></p><p class="mt-4 text-base leading-relaxed text-[#1E293B] flex-1">${p[4]}</p><button data-p="${p[0]}" class="mt-6 pt-4 border-t-2 border-[#0B132B]/10 text-left font-display font-bold text-sm">Ask about ${p[0].toLowerCase()} →</button></div></article>`).join('');$('#plans').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#notes').value=`I would like to ask about the ${b.dataset.p.toLowerCase()}.`;go('contact')})}
+$('#det').innerHTML=DET.map(d=>`<div class="flex items-start gap-3.5 pb-4 border-b-2 last:border-b-0 border-[#0B132B]/10"><div class="w-10 h-10 rounded-xl bg-[#FFD23F] border-2 border-[#070B19] flex items-center justify-center font-bold shrink-0">${d[2]}</div><div class="min-w-0"><dt class="text-xs font-bold text-[#334155]">${d[0]}</dt><dd class="mt-0.5 font-display font-bold text-lg break-words">${d[1]}</dd></div></div>`).join('');
+$('#businessType').innerHTML+=TYPES.map(t=>`<option>${t}</option>`).join('');
+let flt='All',open=[0];
+function faq(){const all=['All',...CATS];$('#flt').innerHTML=all.map(f=>`<button data-f="${f}" aria-pressed="${flt===f}" class="font-display font-bold text-sm px-4 py-2 rounded-xl border-[2.5px] border-[#070B19] min-h-[44px] ${flt===f?'bg-[#0B132B] text-[#FFD23F] shadow-[3px_3px_0_#FFD23F]':'bg-white shadow-[3px_3px_0_#070B19]'}">${f}</button>`).join('');
+const col={'3–7 day setup':Y,'Local payments':M,'Onboarding support':C};
+$('#faqs').innerHTML=FAQ.map((q,i)=>({q,i})).filter(x=>flt==='All'||x.q[0]===flt).map(({q,i})=>`<article class="bg-white rounded-2xl sc overflow-hidden"><button data-i="${i}" aria-expanded="${open.includes(i)}" class="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 hover:bg-[#FFFDF7]"><div><p class="text-xs font-bold text-[#334155]">${q[0]}</p><h3 class="mt-1 font-display font-bold text-lg sm:text-xl">${q[1]}</h3></div><span class="w-9 h-9 rounded-xl border-2 border-[#070B19] flex items-center justify-center shrink-0 mt-1 ${open.includes(i)?'rotate-180':''}" style="background:${col[q[0]]}">⌄</span></button>${open.includes(i)?`<div class="px-5 sm:px-6 pb-5 pt-3 border-t-2 border-[#0B132B]/10"><p class="text-base leading-relaxed text-[#1E293B]">${q[2]}</p></div>`:''}</article>`).join('');
+$('#flt').querySelectorAll('button').forEach(b=>b.onclick=()=>{flt=b.dataset.f;faq()});$('#faqs').querySelectorAll('button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;open=open.includes(i)?open.filter(x=>x!==i):[...open,i];faq()})}
+const val=v=>{const e={},t=k=>v[k].trim();if(!t('ownerName'))e.ownerName='Please enter your name.';if(!t('businessName'))e.businessName='Please enter your shop or business name.';if(!v.businessType)e.businessType='Please choose your business type.';const c=t('contactInfo');if(!c)e.contactInfo='Please share a mobile number, email, or Facebook link.';else if(!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c)||/^\d{7,15}$/.test(c.replace(/[\s\-()+]/g,''))||/^(https?:\/\/)?(www\.)?(fb\.com|facebook\.com)\/\S+$/i.test(c)))e.contactInfo='Enter a valid mobile number, email address, or Facebook page link.';if(!t('barangay'))e.barangay='Please enter your barangay or city.';return e};
+const IDS=['ownerName','businessName','businessType','contactInfo','barangay','notes'];
+$('#f').addEventListener('submit',ev=>{ev.preventDefault();const v={};IDS.forEach(i=>v[i]=$('#'+i).value);const e=val(v);document.querySelectorAll('[data-e]').forEach(p=>p.textContent=e[p.dataset.e]||'');if(Object.keys(e).length)return;const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));$('#okt').innerHTML=`Thank you, <b>${esc(v.ownerName)}</b>. We prepared your inquiry for <b>${esc([v.businessName.trim(),v.businessType,v.barangay.trim()].join(' — '))}</b>. Our barangay crew will reach out via <b>${esc(v.contactInfo)}</b>.`;$('#f').classList.add('hidden');$('#ok').classList.remove('hidden');$('#ok').classList.add('flex')});
+$('#again').onclick=()=>{IDS.forEach(i=>$('#'+i).value='');$('#businessType').value=sel;$('#ok').classList.add('hidden');$('#ok').classList.remove('flex');$('#f').classList.remove('hidden')};
+tags();chips();steps();kit();plans();faq();
+</script>
+</body>
+</html>
